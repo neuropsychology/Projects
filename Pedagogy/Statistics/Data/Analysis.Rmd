@@ -1,0 +1,60 @@
+---
+title: "Analyse"
+author: "Makowski, D. & École de Neuropsychologie"
+output:
+  html_document:
+    fig_caption: yes
+    number_sections: yes
+    theme: journal
+    toc: yes
+    toc_depth: 2
+    toc_float:
+      collapsed: yes
+      smooth_scroll: yes
+  pdf_document:
+    toc: yes
+    toc_depth: '2'
+  word_document:
+    toc: yes
+    toc_depth: '2'
+---
+
+
+This report contains the full statistical analysis. 
+
+# Descriptive Statistics
+
+```{r, echo=TRUE, message=FALSE, warning=FALSE}
+library(knitr)
+library(neuropsychology)
+library(tidyverse)
+library(plotly)
+
+df <- read.csv("df.csv")
+```
+
+
+# Global Satisfaction
+
+```{r, echo=TRUE, message=FALSE, warning=FALSE}
+library(broom)
+
+vars <- df %>% 
+  select(starts_with("Q"))
+
+fit <- lm(Q13_Satisfaction ~ ., data=vars)
+
+summary(fit)
+```
+
+```{r, echo=TRUE, message=FALSE, warning=FALSE}
+plot <- df %>% 
+  ggplot(aes(y=Q13_Satisfaction, x=Q3_Teaching)) +
+  geom_jitter(width=0.05, height=0.05, size=4, shape="+") +
+  geom_smooth(method="lm", fullrange=T) +
+  theme_neuropsychology() +
+  xlab("\nQ3. The teacher explained well") +
+  ylab("Q13. I'm generally satisfied\n")
+ggplotly(plot)
+  
+```
