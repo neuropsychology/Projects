@@ -3,7 +3,8 @@ title: "Analyse"
 author: "Makowski, D. & École de Neuropsychologie"
 output:
   word_document:
-    highlight: pygments
+    fig_height: 6
+    fig_width: 10
     keep_md: yes
     toc: yes
     toc_depth: 2
