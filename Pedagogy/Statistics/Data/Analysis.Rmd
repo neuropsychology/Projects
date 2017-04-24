@@ -1,17 +1,13 @@
 ---
 title: "Analyse"
-author: "Makowski, D. & �cole de Neuropsychologie"
+author: "Makowski, D. & École de Neuropsychologie"
 output:
-  html_notebook:
-    fig_caption: yes
-    number_sections: yes
-    theme: journal
+  word_document:
+    highlight: pygments
+    keep_md: yes
     toc: yes
     toc_depth: 2
-    toc_float:
-      collapsed: yes
-      smooth_scroll: yes
-  html_document:
+  html_notebook:
     fig_caption: yes
     number_sections: yes
     theme: journal
@@ -23,9 +19,15 @@ output:
   pdf_document:
     toc: yes
     toc_depth: '2'
-  word_document:
+  html_document:
+    fig_caption: yes
+    number_sections: yes
+    theme: journal
     toc: yes
-    toc_depth: '2'
+    toc_depth: 2
+    toc_float:
+      collapsed: yes
+      smooth_scroll: yes
 ---
 
 
@@ -42,6 +44,7 @@ library(plotly)
 df <- read.csv("df.csv")
 ```
 
+L'échantillon se compose de `r nrow(df)` étudiants.
 
 # Global Satisfaction
 
@@ -67,3 +70,21 @@ plot <- df %>%
 ggplotly(plot)
   
 ```
+
+# Factor Analysis
+
+```{r}
+library(FactoMineR)
+library(factoextra)
+
+# vars <- df %>% 
+#   select(starts_with("Q")) %>% 
+#   select(-starts_with("Q13"))
+# 
+# pca <- PCA(df)
+# get_eig(res.pca)
+# fviz_screeplot(res.pca, addlabels = TRUE, ylim = c(0, 50))
+
+
+```
+
