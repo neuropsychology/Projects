@@ -2,8 +2,8 @@
 
 ### Contributors
 
-- [Dominique Makowski](https://github.com/orgs/neuropsychology/people/DominiqueMakowski)
-- [Marco Sperduti](https://github.com/orgs/neuropsychology/people/marcosperduti)
-- [Laurie Compère](https://github.com/orgs/neuropsychology/people/LaurieCompere)
+- [Dominique Makowski](https://github.com/DominiqueMakowski)
+- [Marco Sperduti](https://github.com/marcosperduti)
+- [Laurie Compère](https://github.com/LaurieCompere)
 - Kristopher Lamore
 - Marina Mishchenko
