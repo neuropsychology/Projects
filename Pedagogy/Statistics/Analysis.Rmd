@@ -1,6 +1,6 @@
 ---
 title: "Analyse"
-author: "Makowski, D. & Ã‰cole de Neuropsychologie"
+author: "Makowski, D. & École de Neuropsychologie"
 output:
   word_document:
     fig_height: 6
@@ -62,7 +62,7 @@ summary(fit)
 
 ```{r, echo=TRUE, message=FALSE, warning=FALSE}
 plot <- df %>% 
-  ggplot(aes(y=Q13_Satisfaction, x=Q3_Teaching)) +
+  ggplot(aes(y=Q13_Satisfaction, x=Q2_Interest)) +
   geom_jitter(width=0.05, height=0.05, size=4, shape="+") +
   geom_smooth(method="lm", fullrange=T) +
   theme_neuropsychology() +

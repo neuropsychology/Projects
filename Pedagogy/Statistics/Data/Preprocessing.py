@@ -8,4 +8,4 @@ for file in os.listdir("./Raw/"):
     files.append(file)
 
 df = pd.concat(files)
-df.to_csv("df.csv", index=False)
+df.to_csv("../df.csv", index=False)
